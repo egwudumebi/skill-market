@@ -44,6 +44,7 @@ class ExpertController extends Controller
             $expert = Expert::find($request->user()->id);
             // dd($expert);
             
+            
             $expert->profile = $file_path ? $file_path : $expert->profile;
             $expert->fullname = $request->input('fullname') ? $request->input('fullname') : $expert->fullname;
             $expert->username = $request->input('username') ? $request->input('username') : $expert->username;

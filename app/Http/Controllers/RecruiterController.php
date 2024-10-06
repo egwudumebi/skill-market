@@ -12,6 +12,7 @@ class RecruiterController extends Controller
 {
     public function home(): View
     {
+        
         $recruiter = Auth::user();
         $domains = Domain::all();
         return view('recruiter.home')
